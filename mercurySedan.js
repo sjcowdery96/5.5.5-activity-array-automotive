@@ -7,6 +7,7 @@ console.log(v.make)
 
 
 //After you write the derived Car class, you should test it out.
+//inheritence is neat!
 
 //Note: You can code your derived Car class here or make a file named index.js and do it there.
 
