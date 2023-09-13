@@ -10,11 +10,11 @@ console.log(v.make)
 class Car extends VehicleModule.Vehicle {
     constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage);
-        this.maxPassengers = 5;
-        this.passenger = 0;
+        this.maxPassengers = 4;
+        this.passenger = 1;
         this.numberOfWheels = 4;
-        this.maxSpeed = 160;
-        this.fuel = 10;
+        this.maxSpeed = 130;
+        this.fuel = 15;
         this.scheduleService = false;
         this.doors = 4;
     }
@@ -47,7 +47,7 @@ class Car extends VehicleModule.Vehicle {
     }
     
 }
-let myCar = new  Car("Ford", "Taurus", 2011, "blue",12415, 4, 4, 4) //creates a new Ford Taurus 
+let myCar = new  Car("Ford", "Taurus", 2011, "blue",12415) //creates a new Ford Taurus 
 
 
 //tests every method 
