@@ -8,15 +8,15 @@ console.log(v.make)
 
 //After you write the derived Car class, you should test it out.
 class Car extends VehicleModule.Vehicle {
-    constructor(make, model, year, color, mileage, numberOfWheels, passengers, maximumPassengers, maximumSpeed,fuel){
-        super(make, model, year, color, mileage) //calls the parent constructor
-        //adds the new parameters specific to car constructor
-        this.numberOfWheels = numberOfWheels
-        this.passenges = passengers
-        this.maximumPassengers = maximumPassengers
-        this.maximumSpeed = maximumSpeed
-        this.fuel = fuel
-        this.scheduledService = false
+    constructor(make, model, year, color, mileage) {
+        super(make, model, year, color, mileage);
+        this.maxPassengers = 5;
+        this.passenger = 0;
+        this.numberOfWheels = 4;
+        this.maxSpeed = 160;
+        this.fuel = 10;
+        this.scheduleService = false;
+        this.doors = 4;
     }
 
     loadPassenger(numberOfPassengers){
@@ -47,9 +47,16 @@ class Car extends VehicleModule.Vehicle {
     }
     
 }
-let b = new  Car("Ford", "Taurus", 2011, "blue",12415, 4, 4, 4) //creates a new Ford Taurus 
+let myCar = new  Car("Ford", "Taurus", 2011, "blue",12415, 4, 4, 4) //creates a new Ford Taurus 
 
-console.log(b.doors) //prints the doors on the car
+
+//tests every method 
+myCar.start()
+myCar.loadPassenger(5)
+myCar.stop()
+myCar.scheduledService()
+
+console.log(myCar.doors) //prints the doors on the car
 
 //Note: You can code your derived Car class here or make a file named index.js and do it there.
 
